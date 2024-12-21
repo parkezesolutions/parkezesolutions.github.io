@@ -1,0 +1,90 @@
+.App {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.hero {
+  background-image: url('../public/assets/ParkeZe.png'); /* Replace with the path to your image */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center top; /* Adjusts the image to show more of the top */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 100px 20px; /* Increase the top padding to show more of the image */
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.hero p {
+  font-family: 'JetBrains Mono', monospace; /* Set JetBrains Mono font */
+  font-weight: 700; /* Makes the font bold */
+  font-size: 1.7rem; /* Font size */
+  color: #ffffff; /* White text color */
+}
+
+.animation-container {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+  background: #8f2121; /* Placeholder for animation */
+  position: relative;
+  overflow: hidden;
+}
+
+.about, .coming-soon, .api-section {
+  padding: 40px 20px;
+  border-bottom: 1px solid #ddd;
+  margin-top: 60px; /* Adds space between hero section and the next section */
+}
+
+.about h2, .coming-soon h2, .api-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #004d40;
+}
+
+.subscribe-form {
+  margin-top: 20px;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  font-size: 1rem;
+  margin-right: 10px;
+  border: 1px solid #004d40;
+  border-radius: 4px;
+}
+
+.subscribe-form button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.subscribe-form button:hover {
+  background-color: #004d40;
+}
+
+.footer {
+  background: #8ec0a2;
+  color: white;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #e0f7fa;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
