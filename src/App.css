@@ -123,8 +123,3 @@
 .navbar ul li a:hover {
   text-decoration: underline;
 }
-
-/* Adjust body padding so content doesn't go under the navbar */
-body {
-  padding-top: 60px;
-}
