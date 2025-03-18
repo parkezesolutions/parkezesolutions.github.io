@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.2a074364.css",
-    "main.js": "/static/js/main.93a5b03c.js",
-    "static/js/488.ae67d9b8.chunk.js": "/static/js/488.ae67d9b8.chunk.js",
-    "static/media/ParkeZe.jpg": "/static/media/ParkeZe.786cb9296ce358825838.jpg",
-    "index.html": "/index.html",
-    "main.2a074364.css.map": "/static/css/main.2a074364.css.map",
-    "main.93a5b03c.js.map": "/static/js/main.93a5b03c.js.map",
-    "488.ae67d9b8.chunk.js.map": "/static/js/488.ae67d9b8.chunk.js.map"
+    "main.css": "/parkezesolutions/parkezesolutions.github.io/static/css/main.c5f46971.css",
+    "main.js": "/parkezesolutions/parkezesolutions.github.io/static/js/main.27142a49.js",
+    "static/js/488.ae67d9b8.chunk.js": "/parkezesolutions/parkezesolutions.github.io/static/js/488.ae67d9b8.chunk.js",
+    "static/media/ParkeZe.jpg": "/parkezesolutions/parkezesolutions.github.io/static/media/ParkeZe.786cb9296ce358825838.jpg",
+    "index.html": "/parkezesolutions/parkezesolutions.github.io/index.html",
+    "main.c5f46971.css.map": "/parkezesolutions/parkezesolutions.github.io/static/css/main.c5f46971.css.map",
+    "main.27142a49.js.map": "/parkezesolutions/parkezesolutions.github.io/static/js/main.27142a49.js.map",
+    "488.ae67d9b8.chunk.js.map": "/parkezesolutions/parkezesolutions.github.io/static/js/488.ae67d9b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a074364.css",
-    "static/js/main.93a5b03c.js"
+    "static/css/main.c5f46971.css",
+    "static/js/main.27142a49.js"
   ]
 }
