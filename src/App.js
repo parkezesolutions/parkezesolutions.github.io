@@ -13,13 +13,13 @@ function App() {
       {/* About Us Section
       <section className="about">
         <h2>About Us</h2>
-        <p>At ParkeZe, we make sure Parking is the last thing you need to worry about. Stay tuned for updates!</p>
+        <p>At Parkeze, we make sure Parking is the last thing you need to worry about. Stay tuned for updates!</p>
       </section> */}
 
       {/* Coming Soon Section */}
       <section className="coming-soon">
         <h2>Stay Updated</h2>
-        <p>At ParkeZe, we aim to make Parking the last thing you need to worry about. Subscribe to stay in touch!</p>
+        <p>At Parkeze, we aim to make Parking the last thing you need to worry about. Subscribe to stay in touch!</p>
         <form className="subscribe-form">
           <input type="email" placeholder="Your Email" required />
           <button type="submit">Subscribe</button>
