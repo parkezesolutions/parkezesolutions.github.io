@@ -88,3 +88,43 @@
 .footer a:hover {
   text-decoration: underline;
 }
+
+/* Navigation Bar */
+.navbar {
+  background: #004d40;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Adjust body padding so content doesn't go under the navbar */
+body {
+  padding-top: 60px;
+}
