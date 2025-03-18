@@ -40,7 +40,7 @@ jobs:
       - name: 🛠️ Configure GitHub Pages
         run: |
           touch build/.nojekyll  # Disable Jekyll to allow files like _next/
-          echo "parkezesolutions.github.io" > build/CNAME  # Change if you use a custom domain
+          echo "parkezesolutions.com" > build/CNAME  # Change if you use a custom domain
 
       - name: 🚀 Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
