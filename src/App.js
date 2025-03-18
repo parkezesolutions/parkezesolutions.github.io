@@ -10,6 +10,12 @@ function App() {
         <p> Finding parking so you don't have to</p>
       </header>
 
+      {/* Placeholder for APIs */}
+      <section className="api-section">
+        <h2>Developers</h2>
+        <p>APIs are coming soon! Stay tuned for documentation and integration guides.</p>
+      </section>
+
       {/* Coming Soon Section */}
       <section className="coming-soon">
         <h2>Stay Updated</h2>
@@ -18,12 +24,6 @@ function App() {
           <input type="email" placeholder="Your Email" required />
           <button type="submit">Subscribe</button>
         </form>
-      </section>
-
-      {/* Placeholder for APIs */}
-      <section className="api-section">
-        <h2>Developers</h2>
-        <p>APIs are coming soon! Stay tuned for documentation and integration guides.</p>
       </section>
       
       {/* Footer */}
