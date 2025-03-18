@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.6335f854.css",
+    "main.css": "/static/css/main.33795732.css",
     "main.js": "/static/js/main.f24fa0af.js",
     "static/js/488.ae67d9b8.chunk.js": "/static/js/488.ae67d9b8.chunk.js",
     "static/media/ParkeZe.jpg": "/static/media/ParkeZe.786cb9296ce358825838.jpg",
     "index.html": "/index.html",
-    "main.6335f854.css.map": "/static/css/main.6335f854.css.map",
+    "main.33795732.css.map": "/static/css/main.33795732.css.map",
     "main.f24fa0af.js.map": "/static/js/main.f24fa0af.js.map",
     "488.ae67d9b8.chunk.js.map": "/static/js/488.ae67d9b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6335f854.css",
+    "static/css/main.33795732.css",
     "static/js/main.f24fa0af.js"
   ]
 }
