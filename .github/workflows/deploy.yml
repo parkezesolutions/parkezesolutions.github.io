@@ -1,0 +1,26 @@
+name: Deploy React App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change to your default branch if it's not "main"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build React App
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # Branch to deploy to
+          folder: build      # Directory where the React app is built
