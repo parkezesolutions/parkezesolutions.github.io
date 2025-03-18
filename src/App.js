@@ -10,12 +10,6 @@ function App() {
         <p> Finding parking so you don't have to</p>
       </header>
 
-      {/* About Us Section
-      <section className="about">
-        <h2>About Us</h2>
-        <p>At Parkeze, we make sure Parking is the last thing you need to worry about. Stay tuned for updates!</p>
-      </section> */}
-
       {/* Coming Soon Section */}
       <section className="coming-soon">
         <h2>Stay Updated</h2>
@@ -31,10 +25,12 @@ function App() {
         <h2>Developers</h2>
         <p>APIs are coming soon! Stay tuned for documentation and integration guides.</p>
       </section>
+      
       {/* Footer */}
       <footer className="footer">
         <p>&copy; 2025 Parkeze LLC. All rights reserved.</p>
         <p>Contact us: <a href="mailto:contact@parkezesolutions.com">contact@parkezesolutions.com</a></p>
+        <p>Follow us on <a href="https://www.linkedin.com/company/parkeze/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
       </footer>
     </div>
   );
