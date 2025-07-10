@@ -28,22 +28,50 @@ function App() {
     setSubmitStatus('');
 
     try {
-      // For now, we'll simulate form submission
-      // In production, you would send this to your backend API
-      console.log('Contact form submitted:', formData);
+      // Get API key from environment variable or use a default
+      const apiKey = process.env.REACT_APP_WEB3FORMS_API_KEY || '58d8002c-0c8a-4a3a-9567-353b1d4aacb9';
       
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Prepare form data for Web3Forms
+      const web3FormsData = new FormData();
+      web3FormsData.append('access_key', apiKey);
+      web3FormsData.append('name', formData.name);
+      web3FormsData.append('email', formData.email);
+      web3FormsData.append('company', formData.company || 'Not specified');
+      web3FormsData.append('inquiry_subject', formData.subject);
+      web3FormsData.append('message', formData.message);
       
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        subject: '',
-        message: ''
+      // Web3Forms metadata
+      web3FormsData.append('from_name', 'Parkeze Contact Form');
+      web3FormsData.append('subject', 'New Contact Form Submission from Parkeze Website');
+      web3FormsData.append('redirect', 'false'); // Don't redirect, handle response in JavaScript
+      
+      // Add current page URL for reference
+      web3FormsData.append('source_url', window.location.href);
+      web3FormsData.append('timestamp', new Date().toISOString());
+
+      // Submit to Web3Forms
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: web3FormsData
       });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        console.error('Web3Forms error:', result);
+        setSubmitStatus('error');
+      }
     } catch (error) {
+      console.error('Form submission error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -223,6 +251,14 @@ function App() {
         <p>Whether you're a city planner, parking operator, or technology integrator, we'd love to discuss how Parkeze can solve your parking challenges. Our team of experts is ready to help you implement the perfect solution for your needs.</p>
         
         <form className="contact-form" onSubmit={handleContactSubmit}>
+          {/* Web3Forms hidden fields */}
+          <input type="hidden" name="access_key" value={process.env.REACT_APP_WEB3FORMS_API_KEY || 'YOUR_WEB3FORMS_API_KEY_HERE'} />
+          <input type="hidden" name="from_name" value="Parkeze Contact Form" />
+          <input type="hidden" name="subject" value="New Contact Form Submission from Parkeze Website" />
+          
+          {/* Honeypot field for spam protection */}
+          <input type="checkbox" name="botcheck" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
+          
           <div className="form-group">
             <label htmlFor="name">Full Name *</label>
             <input 
@@ -259,11 +295,11 @@ function App() {
           </div>
           
           <div className="form-group">
-            <label htmlFor="subject">Subject *</label>
+            <label htmlFor="inquiry_subject">Subject *</label>
             <input 
               type="text" 
-              id="subject" 
-              name="subject" 
+              id="inquiry_subject" 
+              name="inquiry_subject" 
               value={formData.subject}
               onChange={handleInputChange}
               required 
