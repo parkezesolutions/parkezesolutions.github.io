@@ -36,6 +36,8 @@ jobs:
 
       - name: 🏗️ Build React App
         run: npm run build
+        env:
+          REACT_APP_WEB3FORMS_API_KEY: ${{ secrets.WEB3FORMS_API_KEY }}
 
       - name: 🛠️ Configure GitHub Pages
         run: |
