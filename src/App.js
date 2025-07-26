@@ -44,7 +44,6 @@ function App() {
       web3FormsData.append('from_name', 'Parkeze Contact Form');
       web3FormsData.append('to', 'contact@parkeze.com'); // Specify recipient email
       web3FormsData.append('subject', 'New Contact Form Submission from Parkeze Website'); // Email subject line
-      web3FormsData.append('subject', 'New Contact Form Submission from Parkeze Website');
       web3FormsData.append('redirect', 'false'); // Don't redirect, handle response in JavaScript
       
       // Add current page URL for reference
@@ -54,8 +53,15 @@ function App() {
       // Submit to Web3Forms
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+        },
         body: web3FormsData
       });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
       const result = await response.json();
 
@@ -257,7 +263,7 @@ function App() {
           <input type="hidden" name="access_key" value={process.env.REACT_APP_WEB3FORMS_API_KEY || 'YOUR_WEB3FORMS_API_KEY_HERE'} />
           <input type="hidden" name="from_name" value="Parkeze Contact Form" />
           <input type="hidden" name="to" value="contact@parkeze.com" />
-          <input type="hidden" name="subject" value="New Contact Form Submission from Parkeze Website" />
+          <input type="hidden" name="redirect" value="false" />
           
           {/* Honeypot field for spam protection */}
           <input type="checkbox" name="botcheck" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
