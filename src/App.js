@@ -37,12 +37,13 @@ function App() {
       web3FormsData.append('name', formData.name);
       web3FormsData.append('email', formData.email);
       web3FormsData.append('company', formData.company || 'Not specified');
-      web3FormsData.append('subject', formData.subject);
+      web3FormsData.append('inquiry_subject', formData.subject); // User's subject line
       web3FormsData.append('message', formData.message);
       
       // Web3Forms metadata and recipient configuration
       web3FormsData.append('from_name', 'Parkeze Contact Form');
       web3FormsData.append('to', 'contact@parkeze.com'); // Specify recipient email
+      web3FormsData.append('subject', 'New Contact Form Submission from Parkeze Website'); // Email subject line
       web3FormsData.append('subject', 'New Contact Form Submission from Parkeze Website');
       web3FormsData.append('redirect', 'false'); // Don't redirect, handle response in JavaScript
       
