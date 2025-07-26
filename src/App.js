@@ -37,11 +37,12 @@ function App() {
       web3FormsData.append('name', formData.name);
       web3FormsData.append('email', formData.email);
       web3FormsData.append('company', formData.company || 'Not specified');
-      web3FormsData.append('inquiry_subject', formData.subject);
+      web3FormsData.append('subject', formData.subject);
       web3FormsData.append('message', formData.message);
       
-      // Web3Forms metadata
+      // Web3Forms metadata and recipient configuration
       web3FormsData.append('from_name', 'Parkeze Contact Form');
+      web3FormsData.append('to', 'contact@parkeze.com'); // Specify recipient email
       web3FormsData.append('subject', 'New Contact Form Submission from Parkeze Website');
       web3FormsData.append('redirect', 'false'); // Don't redirect, handle response in JavaScript
       
@@ -254,6 +255,7 @@ function App() {
           {/* Web3Forms hidden fields */}
           <input type="hidden" name="access_key" value={process.env.REACT_APP_WEB3FORMS_API_KEY || 'YOUR_WEB3FORMS_API_KEY_HERE'} />
           <input type="hidden" name="from_name" value="Parkeze Contact Form" />
+          <input type="hidden" name="to" value="contact@parkeze.com" />
           <input type="hidden" name="subject" value="New Contact Form Submission from Parkeze Website" />
           
           {/* Honeypot field for spam protection */}
@@ -295,11 +297,11 @@ function App() {
           </div>
           
           <div className="form-group">
-            <label htmlFor="inquiry_subject">Subject *</label>
+            <label htmlFor="subject">Subject *</label>
             <input 
               type="text" 
-              id="inquiry_subject" 
-              name="inquiry_subject" 
+              id="subject" 
+              name="subject" 
               value={formData.subject}
               onChange={handleInputChange}
               required 
